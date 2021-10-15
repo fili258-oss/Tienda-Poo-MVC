@@ -1,0 +1,14 @@
+<IFModule mod_rewrite.c>
+# Activar rewrite
+RewriteEngine on
+ErrorDocument 404 http://localhost/MasterPHP/proyecto-php-poo-mvc/error/
+
+#RewriteCond Nos ayuda para solo reescribir URLS y no incluir nuevos directorios o ficheros
+RewriteCond %{SCRIPT_FILENAME} !-d 
+RewriteCond %{SCRIPT_FILENAME} !-f 
+
+#Le decimos reescribeme todo a éste formato
+RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
+
+</IFModule>
+

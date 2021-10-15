@@ -1,0 +1,428 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3/04/2021, 08:20:23 PM
+    Author     : MARINO BOTINA <sguergachi at gmail.com>
+*/
+
+/*generales*/
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif, Helvetica, Arial;
+}
+
+body{
+    background-image: url(../img/bg.png);
+}
+
+a{
+    color: #01B1EA;
+    text-decoration: none;
+}
+a:visited{
+    color: #01B1EA;
+}
+a:hover{
+    color: #555555;
+}
+/*Container*/
+#container{
+    width: 89%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 10px gray;
+    background: whitesmoke;
+}
+/*Estilos para las tablas*/
+table{    
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+td{
+    border-top: 1px solid #555;
+    padding: 3px;
+}
+
+.thumb{
+    width: 10em;
+    padding-bottom: 10px;
+}
+
+
+/*Header*/
+#header{    
+    height: 155px;   
+    background: #f0f0f0;
+  
+   
+}
+#logo{
+    padding: 20px;
+    margin-left: 20px;
+    float: left;
+}
+#logo img{
+    float: left;
+    height: 100px;           
+
+}
+
+/*Creación de regla para el slogan*/
+#logo a{
+    float: left;
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-family: 'Open Sans', Helvetica, Arial;
+    text-transform: uppercase;
+    color: #01B1EA;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-left: 20px;
+    text-shadow: 0px 2px 1px #222222;
+    transition: all 300ms;
+}
+
+#logo a:hover{
+    text-shadow: 0px 2px 1px #222222,0px 0px 4px #01B1EA;
+    
+} 
+/*Menu*/
+#menu{
+    clear: both;
+    background: #222;
+    color: white;
+    height: 55px;
+    border-bottom: 4px solid #01B1EA;
+}
+
+#menu ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    margin-left: 35px;
+}
+#menu ul li{
+    line-height: 55px;
+    float: left;
+    border-right: 1px solid #363636;
+}
+#menu a{
+    display: block;
+    color: white;
+    text-decoration: none;    
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 300ms;
+}
+/*first-child Crea una barrera para cada elemento de la etiqueta a*/
+#menu a:first-child{
+    border-left: 1px solid #363636;
+}
+#menu a:hover{
+    background: #01B1EA; 
+}
+
+/*Content ::overflow nos ayuda a ocultar el contenido para que no sobresalga del contenedor*/
+#content{
+    margin: 0px auto;
+    overflow: hidden;
+    background: white;
+}
+/*Barra lateral*/
+#lateral{
+    width: 22%;
+    min-height: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;    
+}
+
+/*Estilos de los divs que aparecen dentro de la barra lateral
+seleccionamos los elementos con clase block_aside, porque tendran los mismos aspetos*/
+#lateral .block_aside{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;    
+}
+/*Estilos para el titulo principal, con display: block; hacemos que el elemento actue como un bloque */
+#lateral h3{
+    display: block;
+    color:#222;
+    width: 90%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background: #E1E1E1;
+    border-bottom: 2px solid #01B1EA;
+    
+}
+
+#lateral ul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lateral ul li{
+    list-style: square;    
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*Forms*/
+.form_container{
+    width: 50%; 
+    margin-left: 50px;
+}
+
+label,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,textarea{
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,textarea{
+    border: 1px solid #C9C9C9;    
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: white;
+    padding: 7px;
+    color: gray;
+    transition: all 300ms;
+}
+
+/*Estilos para los selectores utilizamos focus para resaltar cada elelmento del forumulario
+cuando estemos encima de cada elemento*/
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus{
+    border: 1px solid #1579b5;
+    color: black;
+    
+}
+
+/*Estilos para los campos que son botones*/
+input[type="button"],
+input[type="submit"],
+button, .button{
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: #2979CD;
+    border: 1px solid #11608E;
+    cursor: pointer;
+        
+}
+/*Con !important forzamos a que un color se tenga mas en cuenta*/
+.button{
+    background: #33AE3D;
+    color: white !important;
+    text-decoration: none;
+}
+.button-agregar{
+    width: 8em;
+    text-align: center;
+    margin-bottom: 20px;           
+}
+
+.button-editar{
+    width: 4em;
+    background: orange;
+    margin-top: 5px;
+    margin-left: 90px;
+    margin-bottom: 5px;
+}
+.button-red{    
+    background: red;
+    border: 1px solid #BE0000;
+    text-align: center;
+}
+
+
+label,
+input[type="button"],
+input[type="submit"],
+button{
+ display: block;
+ margin-top: 7px;   
+}
+
+/*Central*/
+#central{
+    width: 72%;
+    min-height: 500px;
+    float:right;
+    border-left: 1px solid #ccc;
+    box-shadow: -5px -1px 5px #ddd;
+    padding: 25px;
+}
+
+#central h1{
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;    
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/*Productos*/
+.product{
+    width: 30%;    
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;        
+}
+
+.product a{
+    color: black;  
+}
+.product a:hover{
+    color: #555;    
+}
+.product img{
+    height: 140px;
+    width: 140px;
+
+    margin-bottom: 20px;
+}
+.img_carrito{
+    height: 70px;
+    display: block;
+    margin:10px auto;
+}
+
+.total{
+    display: block;
+    text-align: right;
+    color: red;
+    
+}
+.product h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.product p{
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#detail-product{
+    width: 100%;
+}
+#detail-product .image{
+    display: block;
+    width: 47%;
+    float: left;
+
+}
+#detail-product img{
+    display: block;
+    width: 100%;
+    float: left;
+    margin-right: 40px;
+}
+
+#detail-product .data{
+    width: 45%;
+    float: right;
+  
+}
+
+#detail-product .descripcion{
+    margin-bottom: 10px;
+}
+#detail-product .price{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #444;
+}
+
+#detail-product .button{
+    width: 200px;
+    text-align: center;
+}
+
+/*Footer con clear: both; limpiamos los posibles flotados para que el contenido no se suba*/
+#footer{
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222222;
+    border-top: 4px solid #01B1EA;
+}
+
+.alerta{        
+    width: 50%;
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+    background: green;
+    box-shadow: 0px 1px 3px #ccc;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+.alerta-error{
+    background: red;
+    
+}
+
+/*CARRITO*/
+.button-pedido{
+    float: right;
+    display: block;
+    width: 8em;
+    margin-top: 10px
+    
+}
+.delete-cart{
+    float: left;
+    margin-left: 65px;
+    
+}
+
+.confirm-cart{
+        
+}
+
+.updown-unidades{
+    width: 80px;
+    margin-left: 40px;
+}
+.updown-unidades .button{
+    display: block;
+    width: 15px;
+    float: left;
+    padding: 2px;
+    margin: 7px;
+}
